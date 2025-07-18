@@ -1,0 +1,12 @@
+apiVersion: apps/v1
+kind: service
+metadata:
+  name: kubepro-service
+spec:
+  type: loadbalancer
+  selector:
+    app: kubepro
+  ports:
+    - protocol: TCP
+      port: 80
+      targetport: 80
